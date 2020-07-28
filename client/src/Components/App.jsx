@@ -30,18 +30,21 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: 'Payment',
+      page: 'LiveStreams',
     };
-    // this.changeToPayment = 
+    this.changeToPayment = this.changeToPayment.bind(this);
+    this.changeToVideo = this.changeToVideo.bind(this);
   }
 
-  changeToPayment() {
+  changeToPayment(event) {
+    event.preventDefault();
     this.setState({
       page: 'Payment'
     })
   }
 
-  changeToVideo() {
+  changeToVideo(event) {
+    event.preventDefault();
     this.setState({
       page:'FlvPlayer'
     })
@@ -51,9 +54,9 @@ class App extends React.Component {
   renderSwitch(page) {
     switch (page) {
       case 'LiveStreams':
-        return <LiveStreams />;
+        return <LiveStreams changeToPayment={this.changeToPayment} />;
       case 'Payment':
-        return <Payment />;
+        return <Payment changeToVideo={this.changeToVideo} />;
       case 'VideoPlayer':
         return <VideoPlayer />;
       case 'FlvPlayer':

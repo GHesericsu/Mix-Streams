@@ -2,12 +2,12 @@ import React from 'react';
 // import { Elements } from '@stripe/react-stripe-js';
 // import { loadStripe } from '@stripe/stripe-js';
 
-const Payment = () => {
+const Payment = ( { changeToVideo }) => {
 
   return (
     <div>
-      Complete your $1000 payment:
-       <form>
+      Complete your $450 payment:
+       <form onClick={changeToVideo} >
         <label>
           Full Name:
           <input
@@ -38,7 +38,7 @@ const Payment = () => {
             type="text"
           />
         </label>
-        <input type="submit" value="Submit" />
+        <input type="button" value="You Agree To Pay $450 for this Live Stream" />
       </form>
     </div>
   )

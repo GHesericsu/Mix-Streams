@@ -72,7 +72,7 @@ class App extends React.Component {
       <div>
         <GlobalStyle />
         <Wrapper>
-          <Nav />
+          <Nav changeToVideo={this.changeToVideo}/>
         </Wrapper>
         {this.renderSwitch(page)}
       </div>

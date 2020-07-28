@@ -25,13 +25,13 @@ const RightNavButton = styled(NavButton)`
   float: right;
 `;
 
-const Nav = () => (
+const Nav = ( {changeToVideo}) => (
   <NavWrapper>
     <NavItem>
       <NavButton type="button">Mix Streams Home</NavButton>
     </NavItem>
     <NavItem>
-      <NavButton type="button">LiveStreams</NavButton>
+      <NavButton type="button" OnClick={changeToVideo}>LiveStreams</NavButton>
     </NavItem>
     <NavItem>
       <NavButton type="button">Creator Login</NavButton>

@@ -7,7 +7,7 @@ const Payment = ( { changeToVideo }) => {
   return (
     <div>
       Complete your $450 payment:
-       <form onClick={changeToVideo} >
+       <form >
         <label>
           Full Name:
           <input
@@ -38,7 +38,7 @@ const Payment = ( { changeToVideo }) => {
             type="text"
           />
         </label>
-        <input type="button" value="You Agree To Pay $450 for this Live Stream" />
+        <input type="submit" value="You Agree To Pay $450 for this Live Stream" onClick={changeToVideo}/>
       </form>
     </div>
   )

@@ -5,13 +5,11 @@ const NavWrapper = styled.ul`
   list-style-type: none;
   margin: 0px;
   padding: 0px;
-  background
 `;
 
 const NavItem = styled.li`
   display:inline;
   margin-right: 25px;
-
 `;
 
 const NavButton = styled.button`
@@ -23,16 +21,23 @@ const NavButton = styled.button`
   color: #F2E9E4;
 `;
 
+const RightNavButton = styled(NavButton)`
+  float: right;
+`;
+
 const Nav = () => (
   <NavWrapper>
     <NavItem>
       <NavButton type="button">Mix Streams Home</NavButton>
     </NavItem>
     <NavItem>
-      <NavButton type="button">Fans Login</NavButton>
+      <NavButton type="button">LiveStreams</NavButton>
     </NavItem>
     <NavItem>
-      <NavButton type="button">Producer Login</NavButton>
+      <NavButton type="button">Creator Login</NavButton>
+    </NavItem>
+    <NavItem>
+      <RightNavButton type="button">Logout</RightNavButton>
     </NavItem>
   </NavWrapper>
 );

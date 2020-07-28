@@ -1,7 +1,12 @@
 import React from 'react';
 import axios from 'axios';
-import styled from 'styled-components';
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components';
+
+import Nav from './Nav.jsx';
+import LiveStreams from './LiveStreams.jsx';
+import Payment from './Payment.jsx';
+import VideoPlayer from './VideoPlayer.jsx';
+import FlvPlayer from './FlvPlayer.jsx';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -11,9 +16,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 300;
     font-size: 18px;
   }
-`
-
-import Nav from './Nav.jsx';
+`;
 
 const Wrapper = styled.div`
   background-color: #22223B;
@@ -21,25 +24,54 @@ const Wrapper = styled.div`
   Height: 100%;
   color: #6034b2;
   padding: 8px;
-`
+`;
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: 'login',
-      username: '',
+      page: 'Payment',
     };
+    // this.changeToPayment = 
+  }
+
+  changeToPayment() {
+    this.setState({
+      page: 'Payment'
+    })
+  }
+
+  changeToVideo() {
+    this.setState({
+      page:'FlvPlayer'
+    })
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  renderSwitch(page) {
+    switch (page) {
+      case 'LiveStreams':
+        return <LiveStreams />;
+      case 'Payment':
+        return <Payment />;
+      case 'VideoPlayer':
+        return <VideoPlayer />;
+      case 'FlvPlayer':
+        return <FlvPlayer />;
+      default:
+        return null;
+    }
   }
 
   render() {
+    const { page } = this.state;
     return (
       <div>
         <GlobalStyle />
         <Wrapper>
           <Nav />
         </Wrapper>
-        This is my APP
+        {this.renderSwitch(page)}
       </div>
     );
   }

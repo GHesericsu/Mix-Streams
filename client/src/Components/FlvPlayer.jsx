@@ -7,9 +7,9 @@ const FlvPlayer = () => (
       url="http://localhost:8888/live/eric.flv"
       heigh="1000px"
       width="800px"
-      isMuted={true}
-      isLive={true}
-      showControls={true}
+      isMuted
+      isLive
+      showControls
     />
   </div>
 );

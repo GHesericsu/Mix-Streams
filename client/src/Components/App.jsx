@@ -38,15 +38,15 @@ class App extends React.Component {
   changeToPayment(event) {
     event.preventDefault();
     this.setState({
-      page: 'Payment'
-    })
+      page: 'Payment',
+    });
   }
 
   changeToVideo(event) {
     event.preventDefault();
     this.setState({
-      page:'FlvPlayer'
-    })
+      page: 'FlvPlayer',
+    });
   }
 
   // eslint-disable-next-line class-methods-use-this

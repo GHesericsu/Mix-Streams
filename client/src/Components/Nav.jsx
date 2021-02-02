@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const NavWrapper = styled.ul`
   list-style-type: none;
@@ -26,7 +27,7 @@ const RightNavButton = styled(NavButton)`
   margin-right: 20px;
 `;
 
-const Nav = ( {changeToVideo}) => (
+const Nav = ({ changeToVideo }) => (
   <NavWrapper>
     <NavItem>
       <NavButton type="button">Mix Streams Home</NavButton>
@@ -42,5 +43,9 @@ const Nav = ( {changeToVideo}) => (
     </NavItem>
   </NavWrapper>
 );
+
+Nav.propTypes = {
+  changeToVideo: PropTypes.func.isRequired,
+};
 
 export default Nav;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Payment = ({ changeToVideo }) => (
   <div>
@@ -38,5 +39,9 @@ const Payment = ({ changeToVideo }) => (
     </form>
   </div>
 );
+
+Payment.propTypes = {
+  changeToVideo: PropTypes.func.isRequired,
+};
 
 export default Payment;

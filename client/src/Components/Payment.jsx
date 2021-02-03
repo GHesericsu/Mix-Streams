@@ -6,7 +6,7 @@ const Payment = ({ changeToVideo }) => (
   <div>
     Complete your $450 payment:
     <form>
-      <label>
+      <label htmlFor="name">
         Full Name:
         <input
           name="name"
@@ -14,7 +14,7 @@ const Payment = ({ changeToVideo }) => (
         />
       </label>
       <br />
-      <label>
+      <label htmlFor="cardNumber">
         Card Number:
         <input
           name="cardNumber"
@@ -22,14 +22,14 @@ const Payment = ({ changeToVideo }) => (
         />
       </label>
       <br />
-      <label>
+      <label htmlFor="expDate">
         Expiration Date:
         <input
           name="expDate"
           type="text"
         />
       </label>
-      <label>
+      <label htmlFor="cvv">
         CVV:
         <input
           name="cvv"

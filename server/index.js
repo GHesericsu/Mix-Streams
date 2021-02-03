@@ -9,7 +9,7 @@ const { rtmpServer } = require('./config.js');
 
 if (cluster.isMaster) {
   for (let i = 0; i < numCPUs; i++) {
-    cluster.fork()
+    cluster.fork();
   }
   cluster.on('exit', (worker, code, signal) => {
     console.log('Worker %d died with code/signal %s. Restarting worker...', worker.process.pid, signal || code);

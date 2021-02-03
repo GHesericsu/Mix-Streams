@@ -26,6 +26,34 @@ const Wrapper = styled.div`
   padding: 8px;
 `;
 
+import React from 'react';
+import axios from 'axios';
+import styled, { createGlobalStyle } from 'styled-components';
+
+import Nav from './Nav.jsx';
+import LiveStreams from './LiveStreams.jsx';
+import Payment from './Payment.jsx';
+import VideoPlayer from './VideoPlayer.jsx';
+import FlvPlayer from './FlvPlayer.jsx';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background-color: #4A4E69;
+    font-family: 'Rowdies', cursive;
+    color: #F2E9E4;
+    font-weight: 300;
+    font-size: 18px;
+  }
+`;
+
+const Wrapper = styled.div`
+  background-color: #22223B;
+  width: 100%;
+  Height: 100%;
+  color: #6034b2;
+  padding: 8px;
+`;
+
 class App extends React.Component {
   constructor(props) {
     super(props);

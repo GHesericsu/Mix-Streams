@@ -23,6 +23,7 @@ const NavButton = styled.button`
 
 const RightNavButton = styled(NavButton)`
   float: right;
+  margin-right: 20px;
 `;
 
 const Nav = ( {changeToVideo}) => (
